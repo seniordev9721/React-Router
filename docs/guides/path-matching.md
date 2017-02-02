@@ -7,6 +7,23 @@ Relative v. Absolute Paths
 Paths that start with `/` are absolute, paths that don't are relative,
 meaning they extend their parent's path.
 
+```xml
+<Route path="/">
+  <!-- /courses/123 -->
+  <Route path="courses/:courseId">
+    <!-- /courses/123/anouncements -->
+    <Route path="announcements" />
+    <!-- /courses/123/dashboard -->
+    <Route path="dashboard" />
+  </Route>
+  <!-- /inbox -->
+  <Route path="inbox">
+    <!-- /messages/123 -->
+    <Route path="/messages/:messageId"/>
+  </Route>
+</Route>
+```
+
 Absolute paths allow you to use any URL you want while maintaining the
 automatic view nesting of the router.
 
