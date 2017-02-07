@@ -22,17 +22,6 @@ var App = React.createClass({
   }
 });
 
-var Image = React.createClass({
-  render: function() {
-    var src = "http://place"+this.props.params.service+".com/400/400";
-    return (
-      <div className="Image">
-        <img src={src}/>
-      </div>
-    );
-  }
-});
-
 var routes = (
   <Routes>
     <Route handler={App}>
