@@ -6,17 +6,13 @@ var Routes = Router.Routes;
 var Route = Router.Route;
 var Link = Router.Link;
 
-var App = React.createClass({
+
+var Image = React.createClass({
   render: function() {
+    var src = "http://place"+this.props.params.service+".com/400/400";
     return (
-      <div>
-        <ul>
-          <li><Link to="image" params={{service: "kitten"}}>Kitten</Link></li>
-          <li><Link to="image" params={{service: "cage"}}>Cage</Link></li>
-        </ul>
-        <CSSTransitionGroup transitionName="example">
-          <this.props.activeRouteHandler />
-        </CSSTransitionGroup>
+      <div className="Image">
+        <img src={src}/>
       </div>
     );
   }
