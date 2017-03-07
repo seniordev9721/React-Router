@@ -19,6 +19,10 @@ var AsyncReactComponent = {
     }.bind(this));
   },
 
+  // componentDidMount => () {
+
+  // }
+
   componentDidMount: function() {
     setTimeout(this.load, 1000); // feel it good
   },
